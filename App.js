@@ -1,21 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import MapScreen from './screens/MapScreen'
+import NewsScreen from './screens/NewsScreen'
+import InfoScreen from './screens/InfoScreen'
+import { createBottomTabNavigator,  createAppContainer } from 'react-navigation';
+
+
+/*Additional Information:
+  O código abaixo faz parte da library React Navigation, uma solução para navegação amplamente utilizada
+  em aplicações react. O link da documentação oficial é: https://reactnavigation.org/docs/en/getting-started.html
+*/
+
+//Cria navigator no formato bottomTab, vinculando a rota "mapScreen" para o componente MapScreen e etc.
+
+const AppNavigator = createBottomTabNavigator({
+  mapScreen: { screen: MapScreen },
+  infoScreen: { screen: InfoScreen },
+  newScreen: { screen: NewsScreen }
+})
+
+const AppContainer = createAppContainer(AppNavigator); //Cria componente de container com as rotas previamente declaradas
 
 export default class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
+    return <AppContainer />;         
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+} 
