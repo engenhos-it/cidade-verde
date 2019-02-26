@@ -3,7 +3,10 @@ import { Text, View } from 'react-native';
 import MapScreen from './screens/MapScreen'
 import NewsScreen from './screens/NewsScreen'
 import InfoScreen from './screens/InfoScreen'
-import { createBottomTabNavigator,  createAppContainer } from 'react-navigation';
+import DetailInfoScreen from './screens/DetailInfoScreen'
+import { createBottomTabNavigator,
+         createAppContainer,
+         createStackNavigator} from 'react-navigation';
 
 
 /*Additional Information:
@@ -15,7 +18,10 @@ import { createBottomTabNavigator,  createAppContainer } from 'react-navigation'
 
 const AppNavigator = createBottomTabNavigator({
   mapScreen: { screen: MapScreen },
-  infoScreen: { screen: InfoScreen },
+  infoStack: createStackNavigator({
+    infoScreen: { screen: InfoScreen  },
+    detailInfo: { screen: DetailInfoScreen }
+  }),
   newScreen: { screen: NewsScreen }
 })
 

@@ -70,6 +70,8 @@ export default class MapScreen extends Component {
             title: "Titulo",
             description: "Description"
         }
+
+
         //Caso mapa já estiver carregado, mostra na tela
         return(
                                                    
@@ -91,9 +93,7 @@ export default class MapScreen extends Component {
                     placeholder="Type Here..."
                     title="Loading button"/>                                 
             </View>
-        )
-        
-        
+        )                
     }
 }
 
