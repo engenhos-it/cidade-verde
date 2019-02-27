@@ -1,35 +1,35 @@
 import React, { Component } from 'react'
 import { Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native'
 import { Card, Button, Icon, Image } from 'react-native-elements'
-
+import WebViewComponent from '../components/WebViewComponent';
+import { WebBrowser } from 'expo'
 
 const newsList = [
     {
         title: "Hello",
         imageUri: 'https://wallpaperbrowse.com/media/images/423678.jpg',
         description: 'The idea with React Native Elements is more about component structure than actual design.',
-        url: '',
+        url: 'https://github.com/facebook/react-native',
         key: '1'        
     },    
     {
         title: "World",
         imageUri: 'https://wallpaperbrowse.com/media/images/423678.jpg',
         description: 'The idea with React Native Elements is more about component structure than actual design.',
-        url: '',
+        url: 'https://github.com/facebook/react-native',
         key: '2'        
     }
 ]
 
-export default class NewsScreen extends Component {
 
-    /*Additional Information:
-        Aqui criamos uma variável padrão que ditará determinadas características que o React Navigation
-        adicionará ao Navigator. Para mais informações: https://reactnavigation.org/docs/en/navigation-options-resolution.html#caution-the-navigationoptions-property-vs-configuration
-    */
-    static navigationOptions = ({ navigation }) => ({
-        title: "Notícias"
-    })
+
+export default class NewsScreen extends Component {
         
+    openLink = async (url) => {
+        await WebBrowser.openBrowserAsync(url);
+    }
+
+
     render() {
         return (            
             <ScrollView style={styles.containerStyle}>
@@ -45,7 +45,8 @@ export default class NewsScreen extends Component {
                             icon={<Icon name='code' color='#ffffff' />}
                             backgroundColor='#03A9F4'
                             buttonStyle={styles.buttonStyle}
-                            title='Ver notícia' />
+                            title='Ver notícia'
+                            onPress={() => this.openLink(news.url)} />
                     </Card>
                 )}
             </ScrollView>  
@@ -56,7 +57,8 @@ export default class NewsScreen extends Component {
 
 const styles = StyleSheet.create({
     containerStyle: {
-        marginTop: 25
+        marginTop: 25,
+        backgroundColor: '#81cd77'
     },
     newsImageStyle: {
          width: null,

@@ -7,7 +7,7 @@ export default class DetailInfoScreen extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
           title: navigation.getParam('infoId', 'A Nested Details Screen'),
-          headerStyle: { backgroundColor: 'green'},
+          headerStyle: { backgroundColor: '#56ab4b'},
           headerTitleStyle: { color: 'white'}, 
           headerTintColor: 'white',  //cor da flecha de voltar
         };

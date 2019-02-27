@@ -16,10 +16,14 @@ const list = [
 ]
 
 export default class InfoScreen extends Component {
-
-  static navigationOptions = ({navigation}) => ({
-    title: "Guia de reciclagem",
-    headerStyle: { backgroundColor: 'green'},
+  /*Additional Information:
+          Aqui criamos uma variável padrão que ditará determinadas características que o React Navigation
+          adicionará ao Navigator. Para mais informações: https://reactnavigation.org/docs/en/navigation-options-resolution.html#caution-the-navigationoptions-property-vs-configuration
+      */
+     
+  static navigationOptions = ({navigation}) => ({    
+    title: "Como reciclar",
+    headerStyle: { backgroundColor: '#56ab4b'},
     headerTitleStyle: { color: 'white'},     
     
   })
