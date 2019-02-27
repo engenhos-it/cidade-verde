@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Text, View, ActivityIndicator, StyleSheet, Platform , FlatList} from 'react-native'
+import { View, StyleSheet, Alert} from 'react-native'
 import { Marker } from 'react-native-maps';
-import { MapView, Permissions, Location } from 'expo';
-import { SearchBar, Icon, Button, ListItem } from 'react-native-elements'
+import { MapView, Permissions, Location, IntentLauncherAndroid } from 'expo';
+import { Icon, Button } from 'react-native-elements'
+import  SearchBarWithListComponent from '../components/SearchBarWithListComponent'
 
 
 const places = [
@@ -43,11 +44,8 @@ export default class MapScreen extends Component {
 
     constructor() {
         super()             
-        this.state = {
-            mapLoaded: false,
-            search: '',
-            region: initialRegion,             
-            filterList: []          
+        this.state = {                    
+            region: initialRegion,                         
         } 
     }
     
@@ -56,55 +54,57 @@ export default class MapScreen extends Component {
       Para mais informações : https://reactjs.org/docs/react-component.html#componentdidmount
 
     */
-    async componentDidMount(){         
-        await Permissions.askAsync(Permissions.LOCATION);
-
-        // let location = await Location.getCurrentPositionAsync({})        
-
-        //ToDo criar tratativa para caso ele negue a localização
-        this.setState({ mapLoaded: true }); 
+     componentDidMount(){         
+         this.getLocation();
       }
 
+
+      getLocation = async (forceLocation) => {      
+          console.log("TAENTRANDO")    
+          
+        let { status } = await Permissions.askAsync(Permissions.LOCATION);
+
+        if(status === 'granted'){
+            let isLocationEnabled = await Location.hasServicesEnabledAsync()
+
+            if(isLocationEnabled){
+                let location = await Location.getCurrentPositionAsync({});
+                this.setState({region: location});
+            }
+
+            //TODO Lidar com o que acontece aqui
+            //TESTAR
+        }
+        else if(forceLocation){
+            Alert.alert(
+                "Alerta",
+                "Para ver ecopontos na sua região é necessário habilitar a localização!",
+                [
+                    { text: "Habilitar Localização", 
+                      style:{backgroundColor: "#56ab4b"}, 
+                      onPress: async() => await IntentLauncherAndroid.startActivityAsync(IntentLauncherAndroid.ACTION_LOCATION_SOURCE_SETTINGS)
+                    }
+                ])
+        }        
+      };
+    
     
     onRegionChangeComplete = (region) => {
         this.setState({ region });
     }
-
-    updateSearch = search => {
-        this.setState({ search });     
-        let filterList = places.filter(place =>  search !== '' && place.name.includes(search))
-        this.setState({filterList})       
-      };
-
-    renderListItem = place => {
-                
+        
+    onPressCallBack = (place) => {
         let region = {
             longitude: place.longitude,
             latitude: place.latitude,
             longitudeDelta: defaultLogitudeDelta,
             latitudeDelta: defaultLatitudeDelta,
         }
-        
-        return (<ListItem
-            key={place.id}
-            title={place.name}      
-            onPress={() => { this.map.animateToRegion(region);
-                              this.setState({search: place.name});
-                              this.searchBar.blur();
-                              this.setState({filterList : []})
-                            }}
-            />)
+
+        this.map.animateToRegion(region);        
     }
-        
-        
-    render() {        
-        if(!this.state.mapLoaded){ 
-            return (
-                <View>
-                    <ActivityIndicator size="large" /> 
-                </View>
-                )
-        }                                
+
+    render() {                                     
         //Caso mapa já estiver carregado, mostra na tela
         return(                                      
             <View style={styles.containerStyle}>
@@ -126,16 +126,23 @@ export default class MapScreen extends Component {
                                     } />)
                     }                    
                 </MapView>
-                <View style={styles.searchBarContainer} >
-                    <SearchBar 
-                        ref={searchBar => this.searchBar = searchBar}                       
-                        platform={Platform.OS}
-                        placeholder="Procurar nesta área..."                        
-                        onChangeText={this.updateSearch}
-                        value={this.state.search}   />
-                    {this.state.filterList.map(place => this.renderListItem(place))}                        
-                </View>                
+                <SearchBarWithListComponent 
+                    placeholder="Procure pelo nome..."
+                    data={places}
+                    filterProperty={'name'}
+                    listItemTitleProp={'name'}
+                    listItemKeyProp={'id'}
+                    onPressCallBack={this.onPressCallBack}
+                 />                                                 
+                    <Icon
+                        raised
+                        name='my-location'                        
+                        color='#56ab4b'
+                        reverse
+                        onPress={() => this.getLocation(true)} 
+                        containerStyle={styles.iconContainer} />                
             </View>
+            
         )                
     }
 }
@@ -147,11 +154,10 @@ const styles = StyleSheet.create({
     },
     mapStyle: {
         flex: 1        
-    },      
-    searchBarContainer : {
+    },
+    iconContainer : {
         position: 'absolute',
-        top: 70,
-        left: 0,
+        bottom: 20,        
         right: 0
-      } 
+      }
 })

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native'
 import { Card, Button, Icon, Image } from 'react-native-elements'
-import WebViewComponent from '../components/WebViewComponent';
 import { WebBrowser } from 'expo'
 
 const newsList = [
@@ -28,7 +27,6 @@ export default class NewsScreen extends Component {
     openLink = async (url) => {
         await WebBrowser.openBrowserAsync(url);
     }
-
 
     render() {
         return (            
