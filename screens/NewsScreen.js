@@ -2,24 +2,17 @@ import React, { Component } from 'react'
 import { Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native'
 import { Card, Button, Icon, Image } from 'react-native-elements'
 import { WebBrowser } from 'expo'
+import HTML from 'react-native-render-html'
 
 const newsList = [
     {
-        title: "Hello",
-        imageUri: 'https://wallpaperbrowse.com/media/images/423678.jpg',
-        description: 'The idea with React Native Elements is more about component structure than actual design.',
-        url: 'https://github.com/facebook/react-native',
-        key: '1'        
-    },    
-    {
-        title: "World",
-        imageUri: 'https://wallpaperbrowse.com/media/images/423678.jpg',
-        description: 'The idea with React Native Elements is more about component structure than actual design.',
-        url: 'https://github.com/facebook/react-native',
-        key: '2'        
+        "summary": "<p>Instituições se associaram para desenvolver, no Brasil, pesquisa com insights do consumidor sobre vida saudável e sustentável</p>\n<p>O post <a rel=\"nofollow\" href=\"https://www.akatu.org.br/noticia/akatu-e-globescan-sao-parceiras-em-pesquisa-sobre-as-tendencias-dos-consumidores-brasileiros/\">Akatu e GlobeScan são parceiras em pesquisa sobre as tendências dos consumidores brasileiros</a> apareceu primeiro em <a rel=\"nofollow\" href=\"https://www.akatu.org.br\">Akatu</a>.</p>",
+        "guid": "https://www.akatu.org.br/?post_type=noticia&p=15811",
+        "image": "https://www.akatu.org.br/wp-content/uploads/2019/02/rawpixel-974545-unsplash-1024x716.jpg",
+        "title": "Akatu e GlobeScan são parceiras em pesquisa sobre as tendências dos consumidores brasileiros",
+        "url": "https://www.akatu.org.br/noticia/akatu-e-globescan-sao-parceiras-em-pesquisa-sobre-as-tendencias-dos-consumidores-brasileiros/"
     }
-]
-
+ ]
 
 
 export default class NewsScreen extends Component {
@@ -32,13 +25,11 @@ export default class NewsScreen extends Component {
         return (            
             <ScrollView style={styles.containerStyle}>
                 {newsList.map(news =>
-                    <Card title={news.title} key={news.key}>
+                    <Card title={news.title} key={news.guid}>
                         <Image style={styles.newsImageStyle}
-                            source={{ uri: news.imageUri }}
-                            PlaceholderContent={<ActivityIndicator />} />
-                        <Text style={styles.descriptionStyle}>
-                            {news.description}
-                        </Text>
+                            source={{ uri: news.image }}
+                            PlaceholderContent={<ActivityIndicator />} />                     
+                            <HTML html={news.summary}/>                        
                         <Button
                             icon={<Icon name='code' color='#ffffff' />}
                             backgroundColor='#03A9F4'
