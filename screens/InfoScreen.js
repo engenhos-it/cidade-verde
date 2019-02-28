@@ -1,19 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, Button } from 'react-native'
 import { ListItem } from 'react-native-elements'
-
-const list = [
-  {
-    title: 'Pilhas',
-    icon: 'av-timer',
-    infoId : '2'
-  },
-  {
-    title: 'Organico',
-    icon: 'flight-takeoff',
-    infoId: '1'
-  },
-]
+import infoList from '../data/initialInfoData'
 
 export default class InfoScreen extends Component {
   /*Additional Information:
@@ -24,29 +12,28 @@ export default class InfoScreen extends Component {
   static navigationOptions = ({navigation}) => ({    
     title: "Como reciclar",
     headerStyle: { backgroundColor: '#56ab4b'},
-    headerTitleStyle: { color: 'white'},     
-    
+    headerTitleStyle: { color: 'white'},         
   })
 
-  onPress = (infoId) => {
-    this.props.navigation.push('detailInfo', { infoId })
+  onPress = (info) => {
+    this.props.navigation.push('detailInfo', { info })
   }
 
 
   render() {
     return (
       <View>
-      {
-        list.map((item, i) => (
-          <ListItem
-            key={i}
-            title={item.title}
-            leftIcon={{ name: item.icon }}
-            onPress={() => this.onPress(item.infoId)}
-          />
-        ))
-      }      
-    </View>
+        {
+          infoList.map((info) => (
+            <ListItem
+              key={info.id}
+              title={info.title}
+              leftIcon={{ name: info.icon }}
+              onPress={() => this.onPress(info)}
+            />
+          ))
+        }
+      </View>
     )
   }
 }

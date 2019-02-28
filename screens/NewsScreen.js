@@ -56,7 +56,7 @@ export default class NewsScreen extends Component {
 const styles = StyleSheet.create({
     containerStyle: {
         marginTop: 25,
-        backgroundColor: '#81cd77'
+        backgroundColor: '#b9e0b4'
     },
     newsImageStyle: {
          width: null,

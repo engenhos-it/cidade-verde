@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "longitude": -46.646199,
+        "latitude": -23.570068, 
+        "name": "Lugar 1",
+        "description": "Este é o lugar 1"
+    },
+    {         
+        "id": "2",
+        "longitude": -46.626812,
+        "latitude": -23.556165, 
+        "name": "Lugar 2",
+        "description": "Este é o lugar 2"
+    },
+    {        
+        "id": "3",
+        "longitude": -46.628291,
+        "latitude": -23.574697, 
+        "name": "Lugar 3",
+        "description": "Este é o lugar 3"
+    }
+]
