@@ -74,8 +74,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        bottom: 0,
-        alignItems: 'center'        
+        bottom: 0        
       },
       devs: {
         fontWeight: 'bold'

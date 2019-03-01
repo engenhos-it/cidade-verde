@@ -1,35 +1,73 @@
 import React, { Component } from 'react'
-import { Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native'
+import { View, Text, ScrollView, ActivityIndicator, StyleSheet } from 'react-native'
 import { Card, Button, Icon, Image } from 'react-native-elements'
 import { WebBrowser } from 'expo'
-import HTML from 'react-native-render-html'
+import ErrorComponent from '../components/ErrorComponent'
+import HTMLView from 'react-native-htmlview'
 
-const newsList = [
-    {
-        "summary": "<p>Instituições se associaram para desenvolver, no Brasil, pesquisa com insights do consumidor sobre vida saudável e sustentável</p>\n<p>O post <a rel=\"nofollow\" href=\"https://www.akatu.org.br/noticia/akatu-e-globescan-sao-parceiras-em-pesquisa-sobre-as-tendencias-dos-consumidores-brasileiros/\">Akatu e GlobeScan são parceiras em pesquisa sobre as tendências dos consumidores brasileiros</a> apareceu primeiro em <a rel=\"nofollow\" href=\"https://www.akatu.org.br\">Akatu</a>.</p>",
-        "guid": "https://www.akatu.org.br/?post_type=noticia&p=15811",
-        "image": "https://www.akatu.org.br/wp-content/uploads/2019/02/rawpixel-974545-unsplash-1024x716.jpg",
-        "title": "Akatu e GlobeScan são parceiras em pesquisa sobre as tendências dos consumidores brasileiros",
-        "url": "https://www.akatu.org.br/noticia/akatu-e-globescan-sao-parceiras-em-pesquisa-sobre-as-tendencias-dos-consumidores-brasileiros/"
-    }
- ]
 
+ const FEED_URL = 'https://9fi7ayotae.execute-api.us-east-1.amazonaws.com/dev/feed/';
 
 export default class NewsScreen extends Component {
         
+    constructor(props) {
+      super(props)
+    
+      this.state = {
+         newsList: [], 
+         hasInternalError: false,
+         isLoading: true
+      }
+    }
+    
+    componentDidMount(){
+        this.getNewsList();
+    }
+
     openLink = async (url) => {
         await WebBrowser.openBrowserAsync(url);
     }
 
+    getNewsList = () => fetch(FEED_URL, {method: "GET"})
+                            .then(res => res.json())
+                            .then(newsList => this.setState({newsList}))
+                            .catch(e => this.setState({hasInternalError: true}))
+                            .finally(e => this.setState({isLoading: false}))
+
+
+    getNewsImage = image => {
+        if (image)
+            return (<Image style={styles.newsImageStyle}
+                            source={{ uri: image }}
+                            PlaceholderContent={<ActivityIndicator />} />)
+    }
+
     render() {
+        
+        let { newsList, hasInternalError, isLoading } = this.state;
+
+        if(isLoading){
+            return (
+                <View style={[styles.containerStyle, { justifyContent: 'center' }]}>
+                    <ActivityIndicator size="large" color="#408237" />
+                </View>
+            )
+        }
+
+        if (hasInternalError) {
+            return (
+                <ErrorComponent buttonMessage = "Ir para o mapa"
+                                onPressCallback={() => this.props.navigation.navigate('mapScreen')}
+                                errorMessage="Aconteceu um erro e estamos trabalhando nisso! Tente acessar a página novamente mais tarde"/>                
+             )
+        }        
+        
         return (            
-            <ScrollView style={styles.containerStyle}>
+            <ScrollView style={styles.containerStyle}>                
                 {newsList.map(news =>
                     <Card title={news.title} key={news.guid}>
-                        <Image style={styles.newsImageStyle}
-                            source={{ uri: news.image }}
-                            PlaceholderContent={<ActivityIndicator />} />                     
-                            <HTML html={news.summary}/>                        
+                        {this.getNewsImage(news.image)}                        
+                        <HTMLView  value={news.summary || ''}/>
                         <Button
                             icon={<Icon name='code' color='#ffffff' />}
                             backgroundColor='#03A9F4'
@@ -38,8 +76,7 @@ export default class NewsScreen extends Component {
                             onPress={() => this.openLink(news.url)} />
                     </Card>
                 )}
-            </ScrollView>  
-         
+            </ScrollView>
         )
     }
 }
@@ -47,7 +84,8 @@ export default class NewsScreen extends Component {
 const styles = StyleSheet.create({
     containerStyle: {
         marginTop: 25,
-        backgroundColor: '#b9e0b4'
+        backgroundColor: '#b9e0b4',
+        flex: 1        
     },
     newsImageStyle: {
          width: null,
@@ -61,5 +99,5 @@ const styles = StyleSheet.create({
         marginLeft: 0,
         marginRight: 0,
         marginBottom: 0 
-    }
+    }    
   });
