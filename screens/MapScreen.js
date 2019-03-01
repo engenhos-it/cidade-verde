@@ -108,7 +108,6 @@ export default class MapScreen extends Component {
                     region={this.state.region}
                     style={[styles.mapStyle, {bottom: this.state.bottom}]}
                     toolbarEnabled
-                    showsUserLocation                                      
                     onRegionChangeComplete={this.onRegionChangeComplete}
                     ref={ref => { this.map = ref; }}>
                     {
