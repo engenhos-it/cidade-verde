@@ -4,33 +4,36 @@ import { Image, Icon } from 'react-native-elements'
 
 export default class DetailInfoScreen extends Component {
     
-    static navigationOptions = ({ navigation }) => {
+    constructor(props){
+      super(props);      
+      this.state = {
+        info : this.props.navigation.state.params.info
+      }
+    }
+
+    static navigationOptions = ({ navigation }) => {      
         return {
-          title: navigation.getParam('infoId', 'A Nested Details Screen'),
+          title: navigation.state.params.info.title,
           headerStyle: { backgroundColor: '#56ab4b'},
           headerTitleStyle: { color: 'white'}, 
           headerTintColor: 'white',  //cor da flecha de voltar
         };
       };
 
-    render() {
-        var infoDetail = {
-            img: 'https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1419261/1160/772/m1/fpnw/wm0/car-battery-icon-01-.jpg?1467539421&s=ed684d7559ac99e74479b028d80df569',
-            titulo: 'Titulo',
-            texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        }
-
-        const itemId = this.props.navigation.getParam('infoId', 0)
+    render() {        
+        
+        let { info } = this.state;
 
         return (
+
             <View style={styles.containerStyle}>
                 <Image
-                    source={{ uri: infoDetail.img }}
+                    source={{ uri: info.img }}
                     style={{ width: 200, height: 200 }}
                     PlaceholderContent={<ActivityIndicator />}
                 />
-                <Text style={styles.tituloStyle}>{infoDetail.titulo}</Text>
-                <Text style={styles.textoStyle}>{infoDetail.texto}</Text>
+                <Text style={styles.tituloStyle}>{info.title}</Text>
+                <Text style={styles.textoStyle}>{info.text}</Text>
             </View>
         )
     }

@@ -1,34 +1,10 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Alert} from 'react-native'
-import { Marker } from 'react-native-maps';
-import { MapView, Permissions, Location, IntentLauncherAndroid } from 'expo';
+// import { Marker } from 'react-native-maps';
+import { MapView, WebBrowser, Permissions, Location, IntentLauncherAndroid } from 'expo';
 import { Icon, Button } from 'react-native-elements'
 import  SearchBarWithListComponent from '../components/SearchBarWithListComponent'
-
-
-const places = [
-    {
-        longitude: -46.646199,
-        latitude: -23.570068, 
-        id: "1",
-        name: 'Lugar 1',
-        description: 'Este é o lugar 1'
-    },
-    {         
-        longitude: -46.626812,
-        latitude: -23.556165, 
-        id: "2",
-        name: 'Lugar 2',
-        description: 'Este é o lugar 2'
-    },
-    {        
-        longitude: -46.628291,
-        latitude: -23.574697, 
-        id: "3",
-        name: 'Lugar 3',
-        description: 'Este é o lugar 3'
-    }
-]
+import locations from '../data/initialLocationData'
 
 const defaultLatitudeDelta = 0.09;
 const defaultLogitudeDelta = 0.04;
@@ -45,7 +21,8 @@ export default class MapScreen extends Component {
     constructor() {
         super()             
         this.state = {                    
-            region: initialRegion,                         
+            region: initialRegion,      
+            bottom: 1 //ToolbarHack                   
         } 
     }
     
@@ -55,37 +32,57 @@ export default class MapScreen extends Component {
 
     */
      componentDidMount(){         
-         this.getLocation();
+         this.getLocation();        
       }
 
+      /*
+        Hack para manter o toolbar do mapa ativo na primeira renderização. 
+        O erro acontece por disfunção assíncrona na comunicação do rn com a interface de mapa do andorid
+        Por conta disso, na primeira renderização do mapa, a toolbar não é carregada.
+        Como solução, renderizar o componente alterando o seu estado faz a toolbar ser renderizada novamente
+        Para mais detalhes da issue aberta: https://github.com/react-native-community/react-native-maps/issues/1033
+      */
 
-      getLocation = async (forceLocation) => {      
-          console.log("TAENTRANDO")    
-          
-        let { status } = await Permissions.askAsync(Permissions.LOCATION);
+      toolbarHack = () => {
+        if(this.state.bottom === 1){
+          this.setState({
+            bottom: 0
+          })
+        } 
+      }
 
-        if(status === 'granted'){
-            let isLocationEnabled = await Location.hasServicesEnabledAsync()
+      getLocation = async (forceLocation) => {                          
+          let { status } = await Permissions.askAsync(Permissions.LOCATION);
 
-            if(isLocationEnabled){
-                let location = await Location.getCurrentPositionAsync({});
-                this.setState({region: location});
-            }
+          if (status === 'granted') {
+              let isLocationEnabled = await Location.hasServicesEnabledAsync()
 
-            //TODO Lidar com o que acontece aqui
-            //TESTAR
-        }
-        else if(forceLocation){
-            Alert.alert(
-                "Alerta",
-                "Para ver ecopontos na sua região é necessário habilitar a localização!",
-                [
-                    { text: "Habilitar Localização", 
-                      style:{backgroundColor: "#56ab4b"}, 
-                      onPress: async() => await IntentLauncherAndroid.startActivityAsync(IntentLauncherAndroid.ACTION_LOCATION_SOURCE_SETTINGS)
+              if (isLocationEnabled) {
+                  let location = await Location.getCurrentPositionAsync({});
+
+                  let newRegion = { 
+                      latitudeDelta: defaultLatitudeDelta, 
+                      longitudeDelta: defaultLogitudeDelta,
+                      latitude: location.coords.latitude,
+                      longitude: location.coords.longitude
                     }
-                ])
-        }        
+                  
+                  this.setState({ region: newRegion });
+              }
+              else if (forceLocation) {
+                  Alert.alert(
+                      "Alerta",
+                      "Para ver ecopontos na sua região é necessário habilitar a localização!",
+                      [
+                          {
+                              text: "Habilitar Localização",
+                              style: { backgroundColor: "#56ab4b" },
+                              onPress: async () => await IntentLauncherAndroid.startActivityAsync(IntentLauncherAndroid.ACTION_LOCATION_SOURCE_SETTINGS)
+                          }
+                      ])                                    
+              }
+
+          }
       };
     
     
@@ -93,10 +90,10 @@ export default class MapScreen extends Component {
         this.setState({ region });
     }
         
-    onPressCallBack = (place) => {
+    onPressCallBack = (location) => {
         let region = {
-            longitude: place.longitude,
-            latitude: place.latitude,
+            longitude: location.longitude,
+            latitude: location.latitude,
             longitudeDelta: defaultLogitudeDelta,
             latitudeDelta: defaultLatitudeDelta,
         }
@@ -104,31 +101,32 @@ export default class MapScreen extends Component {
         this.map.animateToRegion(region);        
     }
 
-    render() {                                     
-        //Caso mapa já estiver carregado, mostra na tela
+    render() {                                             
         return(                                      
             <View style={styles.containerStyle}>
                 <MapView
                     region={this.state.region}
-                    style={styles.mapStyle}
+                    style={[styles.mapStyle, {bottom: this.state.bottom}]}
+                    toolbarEnabled                    
                     onRegionChangeComplete={this.onRegionChangeComplete}
                     ref={ref => { this.map = ref; }}>
                     {
-                        places.map(place => 
-                            <Marker key={place.id}
-                                    title={place.name}
-                                    description={place.description}
+                        locations.map(location => 
+                            <MapView.Marker key={location.id}
+                                    title={location.name}
+                                    onPress={() => this.toolbarHack()}
+                                    description={location.description}
                                     coordinate={
                                         {
-                                            latitude: place.latitude,
-                                            longitude: place.longitude
+                                            latitude: location.latitude,
+                                            longitude: location.longitude
                                         }
                                     } />)
                     }                    
                 </MapView>
                 <SearchBarWithListComponent 
                     placeholder="Procure pelo nome..."
-                    data={places}
+                    data={locations}
                     filterProperty={'name'}
                     listItemTitleProp={'name'}
                     listItemKeyProp={'id'}
@@ -157,7 +155,7 @@ const styles = StyleSheet.create({
     },
     iconContainer : {
         position: 'absolute',
-        bottom: 20,        
-        right: 0
+        bottom: 60,        
+        right: 15
       }
 })

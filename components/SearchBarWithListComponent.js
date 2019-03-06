@@ -19,7 +19,7 @@ export default class SearchBarWithListComponent extends Component {
 
     updateSearch = search => {        
         const { filterProperty, data } = this.state        
-        const filteredList = data.filter(item =>  search !== '' && item[filterProperty].includes(search))
+        const filteredList = data.filter(item =>  search !== '' && item[filterProperty].toUpperCase().includes(search.toUpperCase()))
         this.setState({ search, filteredList });            
     };
 

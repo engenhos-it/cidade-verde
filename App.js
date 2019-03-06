@@ -4,6 +4,7 @@ import MapScreen from './screens/MapScreen'
 import NewsScreen from './screens/NewsScreen'
 import InfoScreen from './screens/InfoScreen'
 import DetailInfoScreen from './screens/DetailInfoScreen'
+import AboutUsScreen from './screens/AbousUsScreen'
 import { createBottomTabNavigator,
          createAppContainer,
          createStackNavigator} from 'react-navigation';
@@ -17,43 +18,34 @@ import { Icon } from 'react-native-elements'
 //Cria navigator no formato bottomTab, vinculando a rota "mapScreen" para o componente MapScreen e etc.
 
 
-const mapScreen = {
-  navigationOptions: {
-    title: 'Mapa',
-    tabBarIcon: ({ tintColor }) => {
-      return (<Icon name="place" size={30} color={tintColor} />);
-    }
-  },
-  screen: MapScreen
-}
+const newsScreen = createScreen(NewsScreen, 'Notícias', 'info')
+const mapScreen = createScreen(MapScreen, 'Mapa', 'place')
+const aboutUsScreen = createScreen(AboutUsScreen, 'Sobre nós', 'nature-people')
 
-const infoScreen = {
+const infoScreen = createScreen(
+  createStackNavigator({
+    infoScreen: { screen: InfoScreen },
+    detailInfo: { screen: DetailInfoScreen }
+  }), 'Como reciclar', 'help')
+
+
+function createScreen (screen, title, icon) {
+  return {
     navigationOptions: {
-      title: 'Como reciclar',
+      title: title,
       tabBarIcon: ({ tintColor }) => {
-        return (<Icon name="help" size={30} color={tintColor} />);
+        return (<Icon name={icon} size={30} color={tintColor} />);
       }
     },
-    screen: createStackNavigator({
-      infoScreen: { screen: InfoScreen },
-      detailInfo: { screen: DetailInfoScreen }
-    })
-}
-
-const newsScreen = {
-  navigationOptions: {
-    title: 'Notícias',
-    tabBarIcon: ({ tintColor }) => {
-      return (<Icon name="info" size={30} color={tintColor} />);
-    }
-  },
-  screen: NewsScreen
+    screen
+  }
 }
 
 const AppNavigator = createBottomTabNavigator({
   mapScreen,
   infoScreen,
-  newsScreen
+  newsScreen,
+  aboutUsScreen
 }, {
     tabBarOptions: {
       activeTintColor: 'white',
@@ -61,9 +53,6 @@ const AppNavigator = createBottomTabNavigator({
       inactiveTintColor: 'white',
       style: {
         backgroundColor: '#56ab4b',
-      },
-      indicatorStyle: {
-        backgroundColor: 'red'
       }
     }
   })
