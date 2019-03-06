@@ -44,7 +44,7 @@ npm start
 
 | Main | Mapa | Como reciclar |
 |:-:|:-:|:-:|
-| ![main](/art/splash.png) | ![mapa](/art/maps.png) | ![howto]() |
+| ![main](/art/splash.png) | ![mapa](/art/maps.png) | ![howto](/art/como-reciclar.png) |
 
 | Informações | Sobre nós | Código |
 |:-:|:-:|:-:|

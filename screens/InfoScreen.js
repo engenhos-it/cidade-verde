@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button } from 'react-native'
+import { Text, ScrollView, Button } from 'react-native'
 import { ListItem } from 'react-native-elements'
 import infoList from '../data/initialInfoData'
 
@@ -22,18 +22,19 @@ export default class InfoScreen extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView>
         {
-          infoList.map((info) => (
-            <ListItem
-              key={info.id}
-              title={info.title}
-              leftIcon={{ name: info.icon }}
-              onPress={() => this.onPress(info)}
-            />
-          ))
+          infoList.map(info => {            
+              return (
+                <ListItem
+                  key={info.id}
+                  title={info.title}
+                  leftIcon={{ name: info.icon, type: info.type }}                  
+                  onPress={() => this.onPress(info)} />
+              )            
+          })
         }
-      </View>
+      </ScrollView>
     )
   }
 }

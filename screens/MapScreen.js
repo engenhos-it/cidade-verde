@@ -6,8 +6,8 @@ import { Icon, Button } from 'react-native-elements'
 import  SearchBarWithListComponent from '../components/SearchBarWithListComponent'
 import locations from '../data/initialLocationData'
 
-const defaultLatitudeDelta = 0.09;
-const defaultLogitudeDelta = 0.04;
+const defaultLatitudeDelta = 0.74;
+const defaultLogitudeDelta = 0.44;
 
 const initialRegion = {
     longitudeDelta: defaultLogitudeDelta,
@@ -86,8 +86,8 @@ export default class MapScreen extends Component {
       };
     
     
-    onRegionChangeComplete = (region) => {
-        this.setState({ region });
+    onRegionChangeComplete = region => {
+        this.setState({ region });        
     }
         
     onPressCallBack = (location) => {
