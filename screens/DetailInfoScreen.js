@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, ActivityIndicator, StyleSheet } from 'react-native'
+import { Text, ScrollView, View, StyleSheet } from 'react-native'
 import { Image, Icon } from 'react-native-elements'
 
 export default class DetailInfoScreen extends Component {
@@ -26,15 +26,13 @@ export default class DetailInfoScreen extends Component {
 
         return (
 
+          <ScrollView>
             <View style={styles.containerStyle}>
-                <Image
-                    source={{ uri: info.img }}
-                    style={{ width: 200, height: 200 }}
-                    PlaceholderContent={<ActivityIndicator />}
-                />
-                <Text style={styles.tituloStyle}>{info.title}</Text>
-                <Text style={styles.textoStyle}>{info.text}</Text>
+              <Icon name={info.icon} size={120} type={info.type} />
+              <Text style={styles.tituloStyle}>{info.title}</Text>
+              <Text style={styles.textoStyle}>{info.text}</Text>
             </View>
+          </ScrollView>
         )
     }
 }
@@ -43,6 +41,7 @@ const styles = StyleSheet.create({
   containerStyle: {
     justifyContent: 'center',
     alignItems: 'center',   
+    marginTop: 30
   },
   tituloStyle:{
     fontSize: 25,

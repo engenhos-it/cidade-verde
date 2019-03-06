@@ -1,23 +1,716 @@
 [
     {
         "id": "1",
-        "longitude": -46.646199,
-        "latitude": -23.570068, 
-        "name": "Lugar 1",
-        "description": "Este é o lugar 1"
+        "longitude": -46.606431,
+        "latitude": -23.543184, 
+        "name": "Ecoponto Bresser",
+        "description": "Aberto das 06:00 - 22:00"
     },
     {         
         "id": "2",
-        "longitude": -46.626812,
-        "latitude": -23.556165, 
-        "name": "Lugar 2",
-        "description": "Este é o lugar 2"
+        "longitude": -46.691452,
+        "latitude": -23.597284, 
+        "name": "Ecoponto Berrini",
+        "description": "Aberto das 08:00 - 22:00"
     },
     {        
         "id": "3",
-        "longitude": -46.628291,
-        "latitude": -23.574697, 
-        "name": "Lugar 3",
-        "description": "Este é o lugar 3"
+        "longitude": -46.583954,
+        "latitude": -23.530460, 
+        "name": "Ecoponto Tatuapé",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "4",
+        "longitude": -46.456672,
+        "latitude": -23.513718, 
+        "name": "Ecoponto Imperador",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "5",
+        "longitude": -46.721961,
+        "latitude": -23.491936, 
+        "name": "Ecoponto Cônego José Salomon",
+        "description": "Aberto das 08:00 - 18:00"
+    },
+    {        
+        "id": "6",
+        "longitude": -46.718121,
+        "latitude": -23.477275, 
+        "name": "Ecoponto Vila Zat",
+        "description": ""
+    },
+    {        
+        "id": "7",
+        "longitude": -46.5495097,
+        "latitude": -23.5372008, 
+        "name": "ECOPONTO Viaduto Eng.º Alberto Badra",
+        "description": "Aberto das 08:00 - 17:00"
+    },
+    {        
+        "id": "8",
+        "longitude": -46.6468361,
+        "latitude": -23.6116989, 
+        "name": "Ecoponto Mirandópolis",
+        "description": "Aberto das 08:00 - 18:00"
+    },
+    {        
+        "id": "9",
+        "longitude": -46.5276392,
+        "latitude": -23.5312898, 
+        "name": "Ecoponto Penha I",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "10",
+        "longitude": -46.3913367,
+        "latitude": -23.4856531, 
+        "name": "Ecoponto Carlito Maia",
+        "description": "Aberto das 07:00 - 21:00"
+    },
+    {        
+        "id": "11",
+        "longitude": -46.6972522,
+        "latitude": -23.4863318, 
+        "name": "Ecoponto Bandeirantes",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "12",
+        "longitude": -46.7528477,
+        "latitude": -23.4091476, 
+        "name": "Ecoponto Recanto dos Humildes",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "13",
+        "longitude": -46.527231,
+        "latitude": -23.5500697, 
+        "name": "Ecoponto Astarte",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "14",
+        "longitude": -46.7775717,
+        "latitude": -23.6641874, 
+        "name": "Ecoponto Santo Dias",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "15",
+        "longitude": -46.6028618,
+        "latitude": -23.5173812, 
+        "name": "Ecoponto Vila Guilherme",
+        "description": "Aberto das 08:00 - 21:00"
+    },
+    {        
+        "id": "16",
+        "longitude": -46.7484157,
+        "latitude": -23.5955713, 
+        "name": "Ecoponto Jardim Maria do Carmo",
+        "description": "Aberto das 07:30 - 21:45"
+    },
+    {        
+        "id": "17",
+        "longitude": -46.3730389,
+        "latitude": -23.4975009, 
+        "name": "Ecoponto Moreira",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "18",
+        "longitude": -46.484946,
+        "latitude": -23.5229918, 
+        "name": "Ecoponto Jardim São Nicolau",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "19",
+        "longitude": -46.7152404,
+        "latitude": -23.6355237, 
+        "name": "Ecoponto Alceu Maynard de Araújo",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "20",
+        "longitude": -46.4173918,
+        "latitude": -23.5936241, 
+        "name": "Ecoponto Nascer do Sol",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "21",
+        "longitude": -46.7945441,
+        "latitude": -23.6718387, 
+        "name": "Ecoponto Parque Fernanda",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "22",
+        "longitude": -46.4643467,
+        "latitude": -23.6293732, 
+        "name": "Ecoponto Cipoaba",
+        "description": "Atendimento 24 horas"
+    },
+    {        
+        "id": "23",
+        "longitude": -46.5104067,
+        "latitude": -23.6069971, 
+        "name": "Ecoponto Anhaia Mello",
+        "description": ""
+    },
+    {        
+        "id": "24",
+        "longitude": -46.5367422,
+        "latitude": -23.5991814, 
+        "name": "EcoPonto São Lucas",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "25",
+        "longitude": -46.6107001,
+        "latitude": -23.5690971, 
+        "name": "Ecoponto Tereza Cristina",
+        "description": "Aberto das 08:00 - 22:00"
+    },
+    {        
+        "id": "26",
+        "longitude": -46.499063,
+        "latitude": -23.6058755, 
+        "name": "Ecoponto Sapopemba",
+        "description": ""
+    },
+    {        
+        "id": "27",
+        "longitude": -46.6580309,
+        "latitude": -23.4915918, 
+        "name": "Ecoponto Parque Peruche",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "28",
+        "longitude": -46.465827,
+        "latitude": -23.5201434, 
+        "name": "Ecoponto Parque Guarani",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "29",
+        "longitude": -46.6325958,
+        "latitude": -23.556329, 
+        "name": "Baixos do Viaduto Glicério",
+        "description": ""
+    },
+    {        
+        "id": "30",
+        "longitude": -46.625364,
+        "latitude": -23.5996884, 
+        "name": "Ecoponto Santa Cruz",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "31",
+        "longitude": -46.6896777,
+        "latitude": -23.5583993, 
+        "name": "Ecoponto Vila Madalena",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "32",
+        "longitude": -46.4645027,
+        "latitude": -23.5064396, 
+        "name": "Ecoponto Pedro Nunes",
+        "description": ""
+    },
+    {        
+        "id": "33",
+        "longitude": -46.4973334,
+        "latitude": -23.506352, 
+        "name": "Ecoponto Jardim São Paulo",
+        "description": ""
+    },
+    {        
+        "id": "34",
+        "longitude": -46.6719713,
+        "latitude": -23.4720075, 
+        "name": "Ecoponto Vila nova Cachoeirinha",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "35",
+        "longitude": -46.6737749,
+        "latitude": -23.4940068, 
+        "name": "Ecoponto Vila Santa Maria",
+        "description": ""
+    },
+    {        
+        "id": "36",
+        "longitude": -46.5458952,
+        "latitude": -23.5135427, 
+        "name": "Ecoponto Tiquatira",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "37",
+        "longitude": -46.511437,
+        "latitude": -23.6233088, 
+        "name": "Ecoponto Vila Cardoso Franco",
+        "description": ""
+    },
+    {        
+        "id": "38",
+        "longitude": -46.6537427,
+        "latitude": -23.6954299, 
+        "name": "Ecoponto Alvarenga",
+        "description": "Aberto das 06:15 - 20:00"
+    },
+    {        
+        "id": "39",
+        "longitude": -46.6877613,
+        "latitude": -23.6283879, 
+        "name": "Ecoponto Vicente Rao",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "40",
+        "longitude": -46.6392435,
+        "latitude": -23.5565917, 
+        "name": "Ecoponto Liberdade",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "41",
+        "longitude": -46.628538,
+        "latitude": -23.521260, 
+        "name": "Ecoponto Armênia",
+        "description": ""
+    },
+    {        
+        "id": "42",
+        "longitude": -46.6506864,
+        "latitude": -23.5270139, 
+        "name": "Ecoponto Barra Funda",
+        "description": "Aberto das 07:00 - 18:00"
+    },
+    {        
+        "id": "43",
+        "longitude": -46.4970938,
+        "latitude": -23.5508234, 
+        "name": "Ecoponto Gamelinha",
+        "description": "Aberto das 09:00 - 20:00"
+    },
+    {        
+        "id": "44",
+        "longitude": -46.6564103,
+        "latitude": -23.6654406, 
+        "name": "Ecoponto Cupecê",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "45",
+        "longitude": -46.6129947,
+        "latitude": -23.5544672, 
+        "name": "Ecoponto Brás",
+        "description": ""
+    },
+    {        
+        "id": "46",
+        "longitude": -46.6049088,
+        "latitude": -23.547468, 
+        "name": "Ecoponto Moóca",
+        "description": "Aberto das 09:00 - 17:00"
+    },
+    {        
+        "id": "47",
+        "longitude": -46.6121982,
+        "latitude": -23.5249933, 
+        "name": "Ecoponto Pari",
+        "description": ""
+    },
+    {        
+        "id": "48",
+        "longitude": -46.6149733,
+        "latitude": -23.5615806, 
+        "name": "Ecoponto Cambuci",
+        "description": "Av. do Estado x Av. D. Pedro I x Rua Ibiruba"
+    },
+    {        
+        "id": "49",
+        "longitude": -46.5674519,
+        "latitude": -23.4856538, 
+        "name": "Ecoponto Vila Sabrina",
+        "description": "Aberto das 06:00 - 18:00"
+    },
+    {        
+        "id": "50",
+        "longitude": -46.4535086,
+        "latitude": -23.6028435, 
+        "name": "Ecoponto Iguatemi",
+        "description": ""
+    },
+    {        
+        "id": "51",
+        "longitude": -46.6327626,
+        "latitude": -23.6323871, 
+        "name": "Ecoponto Imigrantes",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "52",
+        "longitude": -46.7425041,
+        "latitude": -23.4419174, 
+        "name": "Voith",
+        "description": "Aberto das 08:00 - 16:00"
+    },
+    {        
+        "id": "53",
+        "longitude": -46.7518741,
+        "latitude": -23.4530167, 
+        "name": "Ecoponto Alexios Jafet",
+        "description": ""
+    },
+    {        
+        "id": "54",
+        "longitude": -46.6728294,
+        "latitude": -23.5244181, 
+        "name": "Ecoponto",
+        "description": "Aberto das 06:00 - 20:00"
+    },
+    {        
+        "id": "55",
+        "longitude": -46.5073639,
+        "latitude": -23.539237, 
+        "name": "Ecoponto Vila Matilde",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "56",
+        "longitude": -46.527784,
+        "latitude": -23.501986, 
+        "name": "Ecoponto Cangaíba",
+        "description": ""
+    },
+    {        
+        "id": "57",
+        "longitude": -46.4900777,
+        "latitude": -23.5315371, 
+        "name": "Ecoponto Franquinho",
+        "description": ""
+    },
+    {        
+        "id": "58",
+        "longitude": -46.754591,
+        "latitude": -23.5890286, 
+        "name": "Ecoponto",
+        "description": ""
+    },
+    {        
+        "id": "59",
+        "longitude": -46.5830559,
+        "latitude": -23.5195683, 
+        "name": "Ecoponto Vila Maria",
+        "description": ""
+    },
+    {        
+        "id": "60",
+        "longitude": -46.5961263,
+        "latitude": -23.543287, 
+        "name": "Ecoponto Belém",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "61",
+        "longitude":-46.7602346,
+        "latitude": -23.6340962, 
+        "name": "Ecoponto Olinda",
+        "description": ""
+    },
+    {        
+        "id": "62",
+        "longitude": -46.7246432,
+        "latitude": -23.6619797, 
+        "name": "Ecoponto Cidade Saudável",
+        "description": ""
+    },
+    {        
+        "id": "63",
+        "longitude":-46.7442105,
+        "latitude": -23.516478, 
+        "name": "Ecoponto",
+        "description": ""
+    },
+    {        
+        "id": "64",
+        "longitude": -46.7125529,
+        "latitude": -23.5570203, 
+        "name": "Ecoponto Alto de pinheiros",
+        "description": ""
+    },
+    {        
+        "id": "65",
+        "longitude": -46.7672821,
+        "latitude": -23.5759315, 
+        "name": "Ecoponto Politécnica",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "66",
+        "longitude": -46.4909117,
+        "latitude": -23.5589341, 
+        "name": "Ecoponto Valle Cordeiro",
+        "description": ""
+    },
+    {        
+        "id": "67",
+        "longitude": -46.550963,
+        "latitude": -23.532464, 
+        "name": "Ecoponto Vila Luisa",
+        "description": "Rua Recife x Rua Alfredo de Franco - Baixos Viad. Eng. Alberto Badra"
+    },
+    {        
+        "id": "68",
+        "longitude": -46.7925797,
+        "latitude": -23.4322745, 
+        "name": "Ecoponto Jardim Santa Fé",
+        "description": ""
+    },
+    {        
+        "id": "69",
+        "longitude": -46.740935,
+        "latitude": -23.637916, 
+        "name": "Ecoponto Vila das Belezas",
+        "description": ""
+    },
+    {        
+        "id": "70",
+        "longitude": -46.4349909,
+        "latitude": -23.5099116, 
+        "name": "Ecoponto Itaqueruna",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "71",
+        "longitude": -46.5852123,
+        "latitude": -23.5299145, 
+        "name": "Ecoponto Tatuapé",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "72",
+        "longitude": -46.6121868,
+        "latitude": -23.467154, 
+        "name": "Ecoponto Tucuruvi",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "73",
+        "longitude": -46.7286417,
+        "latitude": -23.6100007, 
+        "name": "Ecoponto Giovani Gronchi",
+        "description": "Esquina com a Rua José Dias da Cost"
+    },
+    {        
+        "id": "74",
+        "longitude": -46.7046968,
+        "latitude": -23.4889711, 
+        "name": "Ecoponto Freguesia do Ó",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "75",
+        "longitude": -46.5110053,
+        "latitude": -23.5872449, 
+        "name": "Ecoponto - Nova York",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "76",
+        "longitude":-46.414851,
+        "latitude": -23.5551651, 
+        "name": "Ecoponto - Guaianases",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "77",
+        "longitude": -46.6516438,
+        "latitude": -23.6532612, 
+        "name": "Ecoponto Jabaquara",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "78",
+        "longitude": -46.6770566,
+        "latitude": -23.4698807, 
+        "name": "Ecoponto Vila Rica",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "79",
+        "longitude": -46.6235722,
+        "latitude": -23.5109754, 
+        "name": "Ecoponto Santana",
+        "description": ""
+    },
+    {        
+        "id": "80",
+        "longitude": -46.4192425,
+        "latitude": -23.5101308, 
+        "name": "Ecoponto mãe preta",
+        "description": ""
+    },
+    {        
+        "id": "81",
+        "longitude": -46.3986175,
+        "latitude": -23.5862434, 
+        "name": "Ecoponto Setor G",
+        "description": "Aberto das 08:00 - 18:00"
+    },
+    {        
+        "id": "82",
+        "longitude": -46.7272419,
+        "latitude": -23.6226484, 
+        "name": "Ecoponto Paraisópolis",
+        "description": ""
+    },
+    {        
+        "id": "83",
+        "longitude": -46.3909234,
+        "latitude": -23.5013441, 
+        "name": "Ecoponto Pesqueiro",
+        "description": "Rua Caiuas Nº 18 X Av. Itamerendiba"
+    },
+    {        
+        "id": "84",
+        "longitude": -46.6373066,
+        "latitude": -23.5931248, 
+        "name": "Ecoponto Vila Mariana",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "85",
+        "longitude": -46.6248366,
+        "latitude": -23.5944401, 
+        "name": "Ecoponto Saioá",
+        "description": ""
+    },
+    {        
+        "id": "86",
+        "longitude": -46.6076169,
+        "latitude": -23.6237704, 
+        "name": "Ecoponto Vila das Mercês",
+        "description": ""
+    },
+    {        
+        "id": "87",
+        "longitude": -46.497544,
+        "latitude": -23.562746, 
+        "name": "Ecoponto Cidade Lider",
+        "description": ""
+    },
+    {        
+        "id": "88",
+        "longitude": -46.4036858,
+        "latitude": -23.5733532, 
+        "name": "Ecoponto Inácio Monteiro",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "89",
+        "longitude": -46.4235945,
+        "latitude": -23.5148575, 
+        "name": "Ecoponto - Flamingo",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "90",
+        "longitude": -46.7383338,
+        "latitude": -23.6697098, 
+        "name": "Ecoponto Piraporinha",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "91",
+        "longitude": -46.6227138,
+        "latitude": -23.5392923, 
+        "name": "Ecoponto",
+        "description": "Rua Mendes Caldeira x Rua Monsenhor Andrade"
+    },
+    {        
+        "id": "92",
+        "longitude": -46.49755,
+        "latitude": -23.5793538, 
+        "name": "Ecoponto Montalvania",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "93",
+        "longitude": -46.501648,
+        "latitude": -23.670868, 
+        "name": "Ecoponto",
+        "description": ""
+    },
+    {        
+        "id": "94",
+        "longitude": -46.4871549,
+        "latitude": -23.5039498, 
+        "name": "Ecoponto Parque Boturussu",
+        "description": "Aberto das 06:00 - 22:00"
+    },
+    {        
+        "id": "95",
+        "longitude": -46.5960999,
+        "latitude": -23.6062252, 
+        "name": "Ecoponto",
+        "description": "Rua Comandante Taylor Nº 690 (Baixos Viadurto Comandante Taylor)"
+    },
+    {        
+        "id": "96",
+        "longitude": -46.4887356,
+        "latitude": -23.5788411, 
+        "name": "Ecoponto",
+        "description": ""
+    },
+    {        
+        "id": "97",
+        "longitude": -46.5245289,
+        "latitude": -23.5507657, 
+        "name": "Ecoponto Dalila",
+        "description": ""
+    },
+    {        
+        "id": "98",
+        "longitude": -46.4854734,
+        "latitude": -23.5491548, 
+        "name": "Ecoponto COHAB",
+        "description": ""
+    },
+    {        
+        "id": "99",
+        "longitude": -46.5234444,
+        "latitude": -23.5315692, 
+        "name": "Ecoponto Talarico",
+        "description": ""
+    },
+    {        
+        "id": "100",
+        "longitude": -46.4390272,
+        "latitude": -23.5474144, 
+        "name": "Ecoponto Corinthians",
+        "description": ""
+    },
+    {        
+        "id": "101",
+        "longitude": -46.406179,
+        "latitude": -23.530508, 
+        "name": "Ecoponto Lajeado",
+        "description": ""
+    },
+    {        
+        "id": "102",
+        "longitude": -46.446209,
+        "latitude": -23.628377, 
+        "name": "Lima Bonfante",
+        "description": ""
     }
 ]
