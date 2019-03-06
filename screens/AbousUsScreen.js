@@ -13,6 +13,7 @@ export default class AbousUsScreen extends Component {
 
     const FreePikText =  <Text style={styles.textLink} onPress={() => this.openLink("https://www.freepik.com/")}> Freepik </Text>
     const FlatIconText = <Text style={styles.textLink} onPress={() => this.openLink("https://www.flaticon.com/")}> flaticon.com </Text>
+    const SePareNaoPare = <Text style={styles.textLink} onPress={() => this.openLink("http://separenaopare.com.br/como-reciclar")}> SePareNaoPare </Text>
 
     const Texto = "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado."
 
@@ -35,7 +36,7 @@ export default class AbousUsScreen extends Component {
                     App desenvolvido por: Pedro Ferreira, Gustavo Azevedo, Gabriel Gimenes
                 </Text>
                 <Text style={[styles.textoStyle, styles.otherLinks]}>
-                    Imagens da tela inicial desenvolvidas pela {FreePikText} e oferecidas pela {FlatIconText}
+                    Imagens da tela inicial desenvolvidas pela {FreePikText} e oferecidas pela {FlatIconText}. Partes do texto de reciclagem foram tiradas {SePareNaoPare}
                 </Text>                                         
             </View>
         </View>
