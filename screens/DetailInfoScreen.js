@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, ScrollView, View, StyleSheet } from 'react-native'
 import { Image, Icon } from 'react-native-elements'
+import HTMLView from 'react-native-htmlview'
 
 export default class DetailInfoScreen extends Component {
     
@@ -30,7 +31,9 @@ export default class DetailInfoScreen extends Component {
             <View style={styles.containerStyle}>
               <Icon name={info.icon} size={120} type={info.type} />
               <Text style={styles.tituloStyle}>{info.title}</Text>
-              <Text style={styles.textoStyle}>{info.text}</Text>
+              <View style={styles.textoStyle}>
+                <HTMLView value={info.text}/>
+              </View>
             </View>
           </ScrollView>
         )
@@ -48,6 +51,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   textoStyle:{
+    marginTop: 25,
     width: '90%',
     justifyContent: 'center'    
   }

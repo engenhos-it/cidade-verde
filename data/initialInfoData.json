@@ -4,21 +4,21 @@
       "title": "Lâmpadas",
       "icon": "light-bulb",      
       "type": "octicon",            
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",      
+      "text": "Dentro das lâmpadas se esconde um metal muito tóxico, o mercúrio. Quando a lâmpada está queimada, esse material “explode” e é o vidro que não permite que ele contamine o ambiente. Porém, uma vez jogado em qualquer lugar, o vidro pode quebrar e a água e o solo acabarem poluídos. O modo correto de descartar as lâmpadas é deixando-as separadas do lixo comum, em caixas fechadas de forma que o vidro não se quebre. Em algumas cidades, já existem postos de coleta, como no Rio de Janeiro, em lojas que vendem lâmpadas fluorescentes."      
     },
     {
       "id": "2",      
       "title": "Eletrônicos",
       "icon": "tablet-ipad",
       "type": "material-community",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "Os eletrônicos podem contaminar seriamente o solo, porque possuem metais pesados, como níquel, chumbo e cádmio. Sem falar que possuem outras partes com materiais que demoram muito a se decompor, como a borracha e o vidro. Problema maior ainda para quem precisa descartar uma geladeira de modo antigo, que tem um gás tóxico armazenado, o CFC, um dos responsáveis pela destruição da camada de ozônio. Para descartá-los da maneira correta procure saber se na sua cidade existe esse serviço ou procure entrar em contato com a fabricante. Também pode ser um material reutilizado por alguma cooperativa na sua cidade."
     },
     {
       "id": "3",      
       "title": "Cápsula de café",
       "icon": "coffee",
       "type": "font-awesome",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "<p>Abra a cápsula e separe o plástico, o alumínio e o material orgânico.</p><p>Deposite o pó de café no lixo orgânico.</p><p>Lave o plástico e o alumínio com detergente comum e espere secar para colocar no lixo reservado ao material.</p><p>As cápsulas de café devem ser levadas a postos de coleta, para ter uma destinação correta. Os dois maiores fabricantes presentes no Brasil possuem unidades para reciclagem de cápsulas.</p><p>É muito importante que esses copinhos voltem para as empresas fabricantes porque, por enquanto, só elas reciclam, devido à complexidade do material, que requer uma segregação cuidadosa ao longo de todo o processo.</p>"
     },
     {
       "id": "4",      
@@ -46,7 +46,7 @@
       "title": "Vidro",
       "icon": "glass",
       "type": "font-awesome",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "<p>Esvazie totalmente o recipiente e limpe os resíduos (não precisa lavar).</p><p>Jogue a garrafa, pote ou frasco no cesto de lixo reciclável ou na lixeira destinada aos vidros, quando houver.</p>      <p>Descarte as tampas na lixeira destinada a metais ou plástico, quando houver, ou no lixo reciclável junto com os vidros.</p>      <p>Se o vidro estiver quebrado, embale-o em jornal e descarte-o no lixo comum, para evitar acidentes nos centros de triagem.</p><h3>Atenção!</h3><h4>Não jogue no reciclável:</h4><p>Lâmpada,</p><p>Espelho,</p><p>Vidro temperado (como o do boxe do banheiro),</p><p>Cristal,</p><p>Tubo de TV</p>"
     },
     {
       "id": "8",      
@@ -60,7 +60,7 @@
       "title": "Tubo de creme dental",
       "icon": "tooth",
       "type": "material-community",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "<p>Quando o creme dental acabar, crie o hábito de não jogar no lixinho do banheiro. Separe para descartar na lixeira correta.</p><p>Retire o máximo possível dos resíduos do tubo e da tampa. Isso facilita a limpeza no processo de reciclagem e a melhor utilização do material.</p><p>Se precisar, use um pouco de água. De preferência, de reuso, separada ao lavar a louça, limpar a casa ou tomar banho.</p><p>Depois, descarte na lixeira dos recicláveis ou de plástico.</p>"
     },
     {
       "id": "10",      
@@ -74,7 +74,7 @@
       "title": "Frasco de xampu",
       "icon": "locker",
       "type":"material-community",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "<p>Ao terminar o uso do xampu ou condicionador, na descartar na lixeira do banheiro: a embalagem deve ser limpa e encaminhada para o descarte correto.</p><p>Retirar o máximo possível dos resíduos da embalagem, isso facilita a limpeza no processo de reciclagem e a melhor utilização do material. Pode-se amassar a embalagem se precisar poupar espaço</p><p>Se necessário, utilizar um pouco de água. De preferência, de reuso, separada ao lavar a louça, limpar a casa ou tomar banho.</p><p>Vale ressaltar: os rótulos, comuns nessas embalagens, não precisam ser retirados. Mas se acabarem separados por qualquer motivo, não tem problema, pode-se descartá-los juntos.</p>"
     },
     {
       "id": "12",      
@@ -95,7 +95,7 @@
       "title": "EPS (isopor)",
       "icon": "inbox",
       "type": "font-awesome",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "<p>Retire resíduos orgânicos ou outros produtos da embalagem de EPS(Isopor). Uma rápida lavagem basta para limpá-la, além de reduzir o mau cheiro provocado por restos de alimentos.</p><p>Retire adesivos e separe o isopor de itens metálicos ou de embalagens de papel.</p><p>O EPS é um plástico. Por isso, descarte no cesto de recicláveis ou no cesto de plásticos, quando houver.</p>"
     },
     {
       "id": "15",      
@@ -109,7 +109,7 @@
       "title": "Blister (cartela de remédio)",
       "icon": "pill",
       "type": "material-community",      
-      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "text": "É muito comum que as pessoas joguem os remédios com validade vencida direto no lixo, porém, é perigoso, porque muitos deles possuem substâncias tóxicas, que de um aterro sanitário pode acabar indo poluir um rio. O modo correto de descartar os remédios é os levando a centros de coletas juntamente com a embalagem."
     },
     {
       "id": "17",      
@@ -121,7 +121,7 @@
     {
       "id": "18",      
       "title": "Lata de alumínio",
-      "icon": "checkbox-blank",
+      "icon": "water",
       "type": "material-community",      
       "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     },
@@ -131,5 +131,20 @@
       "icon": "package-variant-closed",
       "type": "material-community",      
       "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }    
+    },
+    {
+      "id": "20",      
+      "title": "Baterias e pilhas",
+      "icon": "battery",
+      "type": "font-awesome",      
+      "text": "<div align='center'>Não importa que tamanho elas tenham, mas possuem uma composição que pode fazer muito mal quando entram em contato com a terra, como chumbo, mercúrio, entre outros metais. O seu efeito nocivo se sentirá nos animais e nas plantas do lugar em que elas foram descartadas. Por isso, a maneira correta de descartar pilhas e baterias é colocando-as em um saco separado e levando diretamente em um posto de coleta.</div>"
+    },
+    {
+      "id": "21",      
+      "title": "Óleo de cozinha",
+      "icon": "water",
+      "type": "material-community",      
+      "text": "O óleo de cozinha muito normalmente é jogado dentro da pia ou ainda dentro do vaso sanitário. O óleo deveria ser descartado de outra forma, até porque pode ser reciclado. Quando você o joga dentro de um ou outro poderá causar sérios problemas na sua rede de esgoto, sem falar, que ele acabará chegando em córregos e rios. O óleo na água impede a entrada de oxigênio e isso faz com que plantas e peixes morram. Para ser amigo da natureza descartando o óleo da maneira correta, separe uma garrafa de plástico e sempre que tiver que jogar fora o líquido usado, o coloque dentro. Depois é só levar em um posto de coleta, caso o seu condomínio já não faça a coleta. Alguns supermercados também estão recebendo o óleo usado para reciclagem."
+    }
+    
 ]
