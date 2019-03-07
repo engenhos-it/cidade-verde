@@ -15,7 +15,7 @@ export default class AbousUsScreen extends Component {
     const FlatIconText = <Text style={styles.textLink} onPress={() => this.openLink("https://www.flaticon.com/")}> flaticon.com </Text>
     const SePareNaoPare = <Text style={styles.textLink} onPress={() => this.openLink("http://separenaopare.com.br/como-reciclar")}> SePareNaoPare </Text>
 
-    const Texto = "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado."
+    const Texto = "Olá, somos a Engenhos, especializados na aplicação de tecnologia para gerar impacto, seja na forma como cuidamos do mundo, seja na competitividade da sua empresa. Acreditamos que o desenvolvimento de sistemas deve ser ágil, entregando constantemente o mais importante primeiro e testando continuamente (e de forma automatizada). Para ter alta performance temos bons processos e automatizados, mas principalemnte cultivamos parceiros, amigos, pessoas extraordinárias, esses sim são nosso diferencial."
 
     return (
         <View style={{flex: 1}}>

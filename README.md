@@ -60,9 +60,9 @@ npm start
 - [Axios](https://github.com/axios/axios)
 
 ## Contribuições
-- [Pedro Ferreira](https://github.com/p-ferreira) - Desenvolvedor
-- [Gustavo Azevendo](https://github.com/Gustavoaz) - Desenvolvedor
-- [Gabriel Gimenes](https://github.com/ggimenes) - Desenvolvedor
+- [Pedro Ferreira](https://github.com/p-ferreira) - Lead Developer
+- [Gustavo Azevendo](https://github.com/Gustavoaz) - Developer
+- [Gabriel Gimenes](https://github.com/ggimenes) - Developer
 
 Contribuições externas são bem vindas
 
