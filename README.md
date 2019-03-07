@@ -6,7 +6,7 @@ Português | [English](/README-cn.md)
 
 Um aplicativo multiplataforma **open-source**, rápido e conciso
 
-![Google Play](/art/google_play.png)
+[![Google Play](/art/google_play.png)](https://play.google.com/store/apps/details?id=com.engenhos.cidadeverde)
 
 
 O Cidade verde é um aplicativo open source desenvolvido em react-native que visa informar os cidadãos paulistanos os ecopontos espalhados pela cidade, para facilitar o despejo do lixo de uma forma eficiente, limpa e sustentável. O aplicativo também fornece informações sobre como reciclar determinados tipos de lixo e notícias sobre o meio ambiente.
@@ -48,7 +48,7 @@ npm start
 
 | Informações | Sobre nós | Código |
 |:-:|:-:|:-:|
-| ![info]() | ![aboutus](/art/about.png) | ![code](/art/codigo.png) |
+| ![info](/art/info.png) | ![aboutus](/art/about.png) | ![code](/art/codigo.png) |
 
 
 ## Construído com:

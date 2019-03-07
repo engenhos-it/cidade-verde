@@ -26,6 +26,7 @@
     },
     "android":{
       "package":"com.engenhos.cidadeverde",
+      "permissions":["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
       "adaptiveIcon":{
         "backgroundColor":"#b9e0b4",
         "backgroundImage":"./assets/icon-bgimage.png",
